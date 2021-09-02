@@ -1,0 +1,1098 @@
+{
+    "info": {
+        "_postman_id": "52c5b264-9eba-4654-ab8e-1849d2eb3802",
+        "name": "API documentation",
+        "description": "A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification\n\nContact Support:\n Name: Postman",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "pets",
+            "item": [
+                {
+                    "name": "{id}",
+                    "item": [
+                        {
+                            "name": "find pet by id",
+                            "id": "53f55e31-9a34-47f3-b463-aa362cb9fab5",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "8ac50a1f-b803-471b-ae96-5a5d35de8709",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of pet to work with in operations"
+                                        }
+                                    ]
+                                },
+                                "description": "Returns a user based on a single ID, if the user does not have access to the pet"
+                            },
+                            "response": [
+                                {
+                                    "id": "777dd45a-8bbc-4051-8d58-e812a0f662d9",
+                                    "name": "pet response",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"name\": \"veniam Duis dolore ut culpa\",\n \"id\": 99791099,\n \"typeOf\": \"Dog\",\n \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                {
+                                    "id": "b3472c7a-59fa-4cae-b5be-5d6097775147",
+                                    "name": "unexpected error",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "replace Pet",
+                            "id": "f5b83780-1883-4273-a7fe-b37a34209b2b",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "eea1a174-0d6b-4f37-a09a-4427c485bbdb",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of pet to work with in operations"
+                                        }
+                                    ]
+                                },
+                                "description": "Replaces Pet with contents"
+                            },
+                            "response": [
+                                {
+                                    "id": "1eacd313-4c3d-4f33-8121-86870a8b6f62",
+                                    "name": "Pet updated correctly",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"name\": \"veniam Duis dolore ut culpa\",\n \"id\": 99791099,\n \"typeOf\": \"Dog\",\n \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                {
+                                    "id": "b1c6b728-c45e-4ee9-916b-fbbb96d3b8c6",
+                                    "name": "unexpected error",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "UPDATEPET",
+                            "id": "b19f407c-a372-4930-9053-a843d7830196",
+                            "request": {
+                                "method": "PATCH",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "1709988d-402c-49f7-a478-70e91d5275fa",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of pet to work with in operations"
+                                        }
+                                    ]
+                                },
+                                "description": "Updates Pet with contents"
+                            },
+                            "response": [
+                                {
+                                    "id": "0a0fe008-9517-4a4f-880b-eb7864847e54",
+                                    "name": "Pet updated correctly",
+                                    "originalRequest": {
+                                        "method": "PATCH",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"name\": \"veniam Duis dolore ut culpa\",\n \"id\": 99791099,\n \"typeOf\": \"Dog\",\n \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                {
+                                    "id": "52424e99-9bf8-4485-aac8-80b8d1710aa9",
+                                    "name": "unexpected error",
+                                    "originalRequest": {
+                                        "method": "PATCH",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "deletepet",
+                            "id": "20ee3e16-d57a-4f85-ac1b-ff839e749cd8",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "a995293a-95ce-4b9c-ac50-34600c623e6b",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of pet to delete"
+                                        }
+                                    ]
+                                },
+                                "description": "deletes a single pet based on the ID supplied"
+                            },
+                            "response": [
+                                {
+                                    "id": "1397e456-b61f-43ab-ac36-74e9499f4c39",
+                                    "name": "pet deleted",
+                                    "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "No Content",
+                                    "code": 204,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                },
+                                {
+                                    "id": "38fbe267-f404-470b-b20f-d18ef6bae714",
+                                    "name": "unexpected error",
+                                    "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/pets/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "pets",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "755b62f8-594e-41d3-8f6e-d5b69902e22e"
+                },
+                {
+                    "name": "find Pets",
+                    "id": "df2afe0c-e06d-46ba-bc94-37b9b4b11d3a",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "A reusable global header",
+                                "key": "GlobalHeader",
+                                "value": "prop1,elit velit officia,prop2,12981726.12410666,prop3,52763183,prop4,[object Object]"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/pets?tags=et est&tags=velit&limit=-68866722&GlobalParam=pariatur in ad laborum eiusmod",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pets"
+                            ],
+                            "query": [
+                                {
+                                    "key": "tags",
+                                    "value": "et est",
+                                    "description": "tags to filter by"
+                                },
+                                {
+                                    "key": "tags",
+                                    "value": "velit",
+                                    "description": "tags to filter by"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": "-68866722",
+                                    "description": "maximum number of results to return"
+                                },
+                                {
+                                    "key": "GlobalParam",
+                                    "value": "pariatur in ad laborum eiusmod"
+                                }
+                            ]
+                        },
+                        "description": "Returns all pets from the system that the user has access to\nNam sed condimentum est. Maecenas tempor sagittis sapien, nec rhoncus sem sagittis sit amet. Aenean at gravida augue, ac iaculis sem. Curabitur odio lorem, ornare eget elementum nec, cursus id lectus. Duis mi turpis, pulvinar ac eros ac, tincidunt varius justo. In hac habitasse platea dictumst. Integer at adipiscing ante, a sagittis ligula. Aenean pharetra tempor ante molestie imperdiet. Vivamus id aliquam diam. Cras quis velit non tortor eleifend sagittis. Praesent at enim pharetra urna volutpat venenatis eget eget mauris. In eleifend fermentum facilisis. Praesent enim enim, gravida ac sodales sed, placerat id erat. Suspendisse lacus dolor, consectetur non augue vel, vehicula interdum libero. Morbi euismod sagittis libero sed lacinia.\nSed tempus felis lobortis leo pulvinar rutrum. Nam mattis velit nisl, eu condimentum ligula luctus nec. Phasellus semper velit eget aliquet faucibus. In a mattis elit. Phasellus vel urna viverra, condimentum lorem id, rhoncus nibh. Ut pellentesque posuere elementum. Sed a varius odio. Morbi rhoncus ligula libero, vel eleifend nunc tristique vitae. Fusce et sem dui. Aenean nec scelerisque tortor. Fusce malesuada accumsan magna vel tempus. Quisque mollis felis eu dolor tristique, sit amet auctor felis gravida. Sed libero lorem, molestie sed nisl in, accumsan tempor nisi. Fusce sollicitudin massa ut lacinia mattis. Sed vel eleifend lorem. Pellentesque vitae felis pretium, pulvinar elit eu, euismod sapien.\n"
+                    },
+                    "response": [
+                        {
+                            "id": "56d7b232-0b50-42ab-8a7e-9ff5046290da",
+                            "name": "pet response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "A reusable global header",
+                                        "key": "GlobalHeader",
+                                        "value": "prop1,cupidatat,prop2,-1644193.8600837886,prop3,-89081576,prop4,[object Object]"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets?tags=exercitation voluptate pariatur aliqua non&tags=consectetur anim&limit=-68866722&GlobalParam=pariatur in ad laborum eiusmod",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "tags",
+                                            "value": "exercitation voluptate pariatur aliqua non"
+                                        },
+                                        {
+                                            "key": "tags",
+                                            "value": "consectetur anim"
+                                        },
+                                        {
+                                            "key": "limit",
+                                            "value": "-68866722"
+                                        },
+                                        {
+                                            "key": "GlobalParam",
+                                            "value": "pariatur in ad laborum eiusmod"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"name\": \"nis\",\n  \"id\": -78937203,\n  \"typeOf\": \"Cat\",\n  \"tag\": \"adipisicing\"\n },\n {\n  \"name\": \"irure Ut enim do cupidatat\",\n  \"id\": -36836975,\n  \"typeOf\": \"Bird\",\n  \"tag\": \"dolore deserunt\"\n }\n]"
+                        },
+                        {
+                            "id": "def1e834-ed98-4c3c-9488-afd3728eea9d",
+                            "name": "unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "A reusable global header",
+                                        "key": "GlobalHeader",
+                                        "value": "prop1,cupidatat,prop2,-1644193.8600837886,prop3,-89081576,prop4,[object Object]"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets?tags=exercitation voluptate pariatur aliqua non&tags=consectetur anim&limit=-68866722&GlobalParam=pariatur in ad laborum eiusmod",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "tags",
+                                            "value": "exercitation voluptate pariatur aliqua non"
+                                        },
+                                        {
+                                            "key": "tags",
+                                            "value": "consectetur anim"
+                                        },
+                                        {
+                                            "key": "limit",
+                                            "value": "-68866722"
+                                        },
+                                        {
+                                            "key": "GlobalParam",
+                                            "value": "pariatur in ad laborum eiusmod"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "add Pet",
+                    "id": "9823e08f-a529-4470-ad33-65e0ff67bafa",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "A reusable global header",
+                                "key": "GlobalHeader",
+                                "value": "prop1,cupidatat,prop2,-1644193.8600837886,prop3,-89081576,prop4,[object Object]"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/pets?GlobalParam=pariatur in ad laborum eiusmod",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pets"
+                            ],
+                            "query": [
+                                {
+                                    "key": "GlobalParam",
+                                    "value": "pariatur in ad laborum eiusmod"
+                                }
+                            ]
+                        },
+                        "description": "Creates a new pet in the store. Duplicates are allowed"
+                    },
+                    "response": [
+                        {
+                            "id": "e5b7ac26-403a-42ce-92b5-fcfac0c8f067",
+                            "name": "Pet was created successfully",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "A reusable global header",
+                                        "key": "GlobalHeader",
+                                        "value": "prop1,cupidatat,prop2,-1644193.8600837886,prop3,-89081576,prop4,[object Object]"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets?GlobalParam=pariatur in ad laborum eiusmod",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "GlobalParam",
+                                            "value": "pariatur in ad laborum eiusmod"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"name\": \"veniam Duis dolore ut culpa\",\n \"id\": 99791099,\n \"typeOf\": \"Dog\",\n \"tag\": \"veniam ipsum elit\"\n}"
+                        },
+                        {
+                            "id": "1b25e035-de57-49d8-a101-035426c37cd4",
+                            "name": "unexpected error",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "A reusable global header",
+                                        "key": "GlobalHeader",
+                                        "value": "prop1,cupidatat,prop2,-1644193.8600837886,prop3,-89081576,prop4,[object Object]"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"veniam Duis dolore ut culpa\",\n    \"id\": 99791099,\n    \"typeOf\": \"Dog\",\n    \"tag\": \"veniam ipsum elit\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/pets?GlobalParam=pariatur in ad laborum eiusmod",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "GlobalParam",
+                                            "value": "pariatur in ad laborum eiusmod"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "5d382ca2-0f37-4d1e-9da6-8f26af11f57c"
+        },
+        {
+            "name": "stores",
+            "item": [
+                {
+                    "name": "{id}",
+                    "item": [
+                        {
+                            "name": "/stores/:id",
+                            "id": "2c51db2b-eaae-41a2-b8df-97c24e5e4460",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/stores/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "stores",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "4be2c24b-4959-427a-8074-29ca431b9053",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of store to fetch"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "12d28402-cf29-45d2-a546-51f7025aa245",
+                                    "name": "pet response",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/stores/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "stores",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"id\": 35265446,\n \"name\": \"velit\",\n \"typeOf\": \"Reptile\",\n \"tag\": \"proident nulla ullamco\",\n \"value\": -77352157.52483016,\n \"saleValue\": -7246613.655245453,\n \"onSale\": false\n}"
+                                },
+                                {
+                                    "id": "370fef8f-5f8a-4b2a-a11f-0e407f1e6e73",
+                                    "name": "unexpected error",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/stores/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "stores",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Get All Pets For Store By Id",
+                            "id": "0c114a8d-569c-4009-a4c2-09a15e2735af",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/stores/:id/pets",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "stores",
+                                        ":id",
+                                        "pets"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "34e92e65-cbb0-47fc-9f37-474759b45fed",
+                                            "key": "id",
+                                            "value": "-68866722",
+                                            "description": "(Required) ID of store to fetch"
+                                        }
+                                    ]
+                                },
+                                "description": "Retrieves contents of stores"
+                            },
+                            "response": [
+                                {
+                                    "id": "f537ca29-8307-47dd-b492-c3f2e3595247",
+                                    "name": "Returns list of Store items",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/stores/:id/pets",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "stores",
+                                                ":id",
+                                                "pets"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"schema\": {\n  \"name\": \"nisi laborum ullamco non\",\n  \"id\": -73431837,\n  \"typeOf\": \"Bird\",\n  \"tag\": \"aliqua aliq\"\n }\n}"
+                                },
+                                {
+                                    "id": "beebe7d0-64e9-481b-8e0c-524a40414a88",
+                                    "name": "No items found",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/stores/:id/pets",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "stores",
+                                                ":id",
+                                                "pets"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                },
+                                {
+                                    "id": "d4e93ba4-810f-4b5b-b221-f89f3d9bee02",
+                                    "name": "Something went wrong on server",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/stores/:id/pets",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "stores",
+                                                ":id",
+                                                "pets"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "999b2739-1a7e-4f3b-af6d-f31d9482be88"
+                },
+                {
+                    "name": "Get All Stores",
+                    "id": "a98a4cf0-60bb-45a3-81a5-2240422ea993",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "stores"
+                            ]
+                        },
+                        "description": "Retrieves contents of stores"
+                    },
+                    "response": [
+                        {
+                            "id": "15965147-d574-489a-ba7a-e60dfedeb260",
+                            "name": "Returns list of Store items",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/stores",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "stores"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": 10706131,\n  \"name\": \"minim sint elit ut reprehenderit\",\n  \"typeOf\": \"Reptile\",\n  \"tag\": \"dolor deserunt reprehenderit enim amet\",\n  \"value\": 56415745.468211174,\n  \"saleValue\": -44746622.35708142,\n  \"onSale\": false\n },\n {\n  \"id\": 14475908,\n  \"name\": \"sed exercitation in reprehenderit\",\n  \"typeOf\": \"Cat\",\n  \"tag\": \"aute veniam\",\n  \"value\": -92200855.50669923,\n  \"saleValue\": -55531688.00759627,\n  \"onSale\": false\n }\n]"
+                        },
+                        {
+                            "id": "6b59f2f4-45e0-4316-8fe1-62dc2aeec477",
+                            "name": "No items found",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/stores",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "stores"
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                        },
+                        {
+                            "id": "d98e71e8-dec1-421b-ae9f-c38a5561a46a",
+                            "name": "Something went wrong on server",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/stores",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "stores"
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"code\": 4018255,\n \"message\": \"minim cupidatat ex sed\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "4681779d-875e-4f05-a112-07b7ed094bf5"
+        }
+    ],
+    "variable": [
+        {
+            "id": "b5513bf8-3311-4afe-bcbd-bb4cc2188e2c",
+            "key": "baseUrl",
+            "value": "/",
+            "type": "string"
+        }
+    ]
+}
